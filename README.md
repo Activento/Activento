@@ -28,7 +28,7 @@ En cuanto al reparto de trabajo el apartado de implementación de la plataforma 
 
 * Francisco Toranzo: Django
 * Gabriel Guirado: MySQL
-* Pablo Martín-Moreno: Python
+* Pablo Martín-Moreno Ruiz: Python
 * Jose Antonio Peña: HTML y CSS
 * Cristian Manuel Lorenzo: HTML y CSS
 
