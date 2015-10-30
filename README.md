@@ -35,6 +35,6 @@ En cuanto al reparto de trabajo el apartado de implementación de la plataforma 
 En cuanto a la parte de despliegue automático, testeo, configuración, integración continua participaremos los 5 colaboradores,  mas adelante cuando sepamos exactamente cuales son las correspondienstes partes se añadiran a cada uno sus funciones y su trabajo.
 
 
-[![Build Status](https://travis-ci.org/Activento/Activento.svg?branch=master)](https://github.com/Activento/Activento)
+[![Build Status](https://travis-ci.org/Activento/Activento.svg?branch=master)](https://travis-ci.org/Activento/Activento)
 
 
