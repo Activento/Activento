@@ -11,7 +11,7 @@ class index(CreateView):
 	template_name = 'activento/index.html'
 	model = Usuario
 	fields = ['nombre','password']
-
+"""
 	def post(self, request, *args, **kwargs):
 		nombre_empresa = request.POST['nombre']
 		password = request.POST['password']
@@ -29,7 +29,7 @@ class index(CreateView):
 
 		
 		return render(request,'activento/index.html',{'salida':salida})
-
+"""
 class user(ListView):
 	template_name = 'activento/user.html'
 	model = Usuario
