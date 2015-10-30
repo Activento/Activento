@@ -8,15 +8,17 @@ Listar
 {% block content %}
 	<h1> Lista de usuarios y Categorias</h1>
 	<h1> Probando el usuario {{usuario_activo}}</h1>
-	
+
 
 	<div>
 		<h2> Lista de siguiendo </h2>
 			<ul>
-		{% for categoria in object_list %}
-			<li><b>Nombre:</b> {{categoria.seguir.nombre}} </li>
-			<li><b>Descripcion: </b> {{categoria.seguido}} </li>
-
+		{% for next in lista_seguidores %}
+			<li><b>usuario seguido:</b> {{next.seguido}} </li>
+			<form action="/listarSiguiendo/" method="post">{% csrf_token %}
+				<input name="dseg" type="hidden" value="{{next.seguido}}">
+				<input type="submit" value="dejar de seguir">
+			</form>
 		{% endfor %}
 	</ul>
 
@@ -30,7 +32,7 @@ Listar
 	<p> {{salida}}</p>
 
 
-	<a href="user"> mandame a inicio</a>
+	<a href="/user"> mandame a inicio</a>
 
 
 
@@ -40,7 +42,7 @@ Listar
 
 
 
-	
+
 
 
 {% endblock %}

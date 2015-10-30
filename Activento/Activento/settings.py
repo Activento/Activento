@@ -25,8 +25,8 @@ SECRET_KEY = 'h27xhcx6&6dtem=@&z($t*73)1(&-&ico--17_21+(yvv7c_t@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-from unipath import Path
-RUTA_PROYECTO = Path(__file__).ancestor(2)
+
+
 
 ALLOWED_HOSTS = []
 
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'Activento.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [RUTA_PROYECTO.child('templates'),],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -107,5 +107,5 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = (
-    RUTA_PROYECTO.child('static'),
+    os.path.join(BASE_DIR, 'static'),
 )

@@ -1,5 +1,7 @@
 from django.conf.urls import include, url
-from .views import index,user,registrarse,crearCategoria,listarCategorias,listarUsuario,siguiendo,listarSiguiendo
+from django.contrib import admin
+from . import views
+from .views import index,user,registrarse,crearCategoria,listarCategorias,listarUsuario
 
 
 urlpatterns = [
@@ -10,7 +12,7 @@ urlpatterns = [
 	url(r'^crearCategoria$', crearCategoria.as_view(), name="crearCategoria"),
 	url(r'^listarCategorias$', listarCategorias.as_view(), name="listarCategorias"),
 	url(r'^listarUsuario$', listarUsuario.as_view(), name="listarUsuario"),
-	url(r'^siguiendo$', siguiendo.as_view(), name="siguiendo"),
-	url(r'^listarSiguiendo$', listarSiguiendo.as_view(), name="listarSiguiendo"),
+	url(r'^siguiendo/$', views.siguiendo, name="siguiendo"),
+	url(r'^listarSiguiendo/$', views.listarSiguiendo, name="listarSiguiendo"),
 
 ]

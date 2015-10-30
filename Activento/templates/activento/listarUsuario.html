@@ -8,16 +8,16 @@ Listar
 {% block content %}
 	<h1> Lista de usuarios</h1>
 	<h1> Probando el usuario {{usuario_activo}}</h1>
-	
+
 
 	<div>
 		<h2> Lista de categorias </h2>
 			<ul>
 		{% for usuario in usuarios %}
 			<li><b>Nombre:</b> {{usuario.nombre}} </li>
-			<form method="POST" action="/siguiendo">
+			<form method="POST" action="/siguiendo/">
 				{% csrf_token %}
-
+				<input name="usu_seg" type="hidden" value="{{usuario.nombre}}">
 				<input type="submit" value="Seguir">
 
 
@@ -46,7 +46,7 @@ Listar
 
 
 
-	
+
 
 
 {% endblock %}

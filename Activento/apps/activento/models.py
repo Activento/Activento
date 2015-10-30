@@ -14,8 +14,8 @@ class Usuario(models.Model):
 		return self.nombre
 
 class Sigue(models.Model):
-	seguir = models.ManyToManyField(Usuario)
-	seguido = models.ManyToManyField(Usuario, related_name='seguido')
+	seguir = models.ForeignKey(Usuario)
+	seguido = models.ForeignKey(Usuario,related_name='idolo')
 
 	def __unicode_(self):
 		return self.seguir
@@ -27,7 +27,7 @@ class Categoria(models.Model):
 	descripcion = models.CharField(max_length=500)
 
 	def __unicode__(self):
-		return self.nombre	
+		return self.nombre
 
 
 class Pertenece(models.Model):
@@ -35,4 +35,4 @@ class Pertenece(models.Model):
 	nombre_cate = models.ManyToManyField(Categoria)
 
 	def __unicode__(self):
-		return self.nombre_usu	
+		return self.nombre_usu

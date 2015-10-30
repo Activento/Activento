@@ -1,1 +1,31 @@
-siguiendo.html
+{% extends "base.html" %}
+
+{% block title %}
+{% if duplicado %}
+  Ya eres seguidor
+{% else %}
+  Felicidades
+{% endif %}
+{% endblock %}
+
+
+{% block content %}
+{% if duplicado %}
+{% else %}
+	<p>{{usuario}} ahora eres seguidor de {{seguido}}</p>
+
+
+	<a href="/user"> mandame a inicio</a>
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
