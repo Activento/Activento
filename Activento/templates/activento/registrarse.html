@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}
+Activento, Registrarse
+{% endblock %}
+
+
+{% block content %}
+	<h1> Registrate</h1>
+
+	
+
+	<div>
+		<h2> Introduzca los siguientes datos </h2>
+		<form method="POST" action="/registrarse" id=registrar>
+			{% csrf_token %}
+			
+		  Nick:  <input type="text" name="nombre"> </br>
+		  Introduce tu contraseña:  <input type="password" name="password"> </br>
+		  Confirma tu contraseña:  <input type="password" name="password2">
+		   </br>
+
+
+			<input type="submit" value="registar">
+
+
+		</form>
+
+	  <br/>
+	 
+
+	</div>
+
+	<p> {{salida}}</p>
+
+
+	<a href="../"> mandame a inicio</a>
+
+
+
+
+
+
+	
+
+
+{% endblock %}

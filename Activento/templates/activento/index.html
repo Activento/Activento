@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+Activento
+{% endblock %}
+
+
+{% block content %}
+	<h1>Inicio de sesión</h1>
+
+	<div>
+		<h2> Iniciar sesión </h2>
+		<form method="POST" action="/user" id=registrar>
+			{% csrf_token %}
+			
+		  Nick:  <input type="text" name="nombre"> </br>
+		  Introduce tu contraseña:  <input type="password" name="password"> 
+		   </br>
+
+
+			<input type="submit" value="Iniciar sesion">
+
+
+		</form>
+
+	  <br/>
+	 
+
+	</div>
+
+
+
+
+	<div>		
+		<h2> Registrarse </h2>
+		<a href="registrarse" > Pincha aqui para registrate en la web</a>
+
+
+	</div>
+
+
+
+
+
+
+	
+
+
+{% endblock %}

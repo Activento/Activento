@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+Listar
+{% endblock %}
+
+
+{% block content %}
+	<h1> Lista de usuarios y Categorias</h1>
+	<h1> Probando el usuario {{usuario_activo}}</h1>
+	
+
+	<div>
+		<h2> Lista de siguiendo </h2>
+			<ul>
+		{% for categoria in object_list %}
+			<li><b>Nombre:</b> {{categoria.seguir.nombre}} </li>
+			<li><b>Descripcion: </b> {{categoria.seguido}} </li>
+
+		{% endfor %}
+	</ul>
+
+
+	</div>
+
+
+	</div>
+
+
+	<p> {{salida}}</p>
+
+
+	<a href="user"> mandame a inicio</a>
+
+
+
+
+
+
+
+
+
+	
+
+
+{% endblock %}

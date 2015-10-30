@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+Listar
+{% endblock %}
+
+
+{% block content %}
+	<h1> Lista de usuarios</h1>
+	<h1> Probando el usuario {{usuario_activo}}</h1>
+	
+
+	<div>
+		<h2> Lista de categorias </h2>
+			<ul>
+		{% for usuario in usuarios %}
+			<li><b>Nombre:</b> {{usuario.nombre}} </li>
+			<form method="POST" action="/siguiendo">
+				{% csrf_token %}
+
+				<input type="submit" value="Seguir">
+
+
+			</form>
+
+		{% endfor %}
+	</ul>
+
+
+	</div>
+
+
+	</div>
+
+
+	<p> {{salida}}</p>
+
+
+	<a href="user"> mandame a inicio</a>
+
+
+
+
+
+
+
+
+
+	
+
+
+{% endblock %}

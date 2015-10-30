@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+Activento, Registrarse
+{% endblock %}
+
+
+{% block content %}
+	<h1> Registrate</h1>
+
+	
+
+	<div>
+		<h2> Introduzca los siguientes datos </h2>
+		<form method="POST" action="/crearCategoria" id=registrar>
+			{% csrf_token %}
+			
+		  Introduce el nombre de la categoria:  <input type="text" name="nombre"> </br>
+		  Introduce una descripcion:  <input type="text" name="descripcion"> </br>
+
+
+
+			<input type="submit" value="registar categoria">
+
+
+		</form>
+
+	  <br/>
+	 
+
+	</div>
+
+	<p> {{salida}}</p>
+
+
+	<a href="user"> mandame a mi perfil</a>
+
+
+
+
+
+
+	
+
+
+{% endblock %}
