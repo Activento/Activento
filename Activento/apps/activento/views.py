@@ -13,29 +13,7 @@ class index(CreateView):
 	template_name = 'activento/index.html'
 	model = Usuario
 	fields = ['nombre','password']
-"""
-	def post(self, request, *args, **kwargs):
-		nombre_empresa = request.POST['nombre']
-		password = request.POST['password']
 
-		if Usuario.objects.filter(nombre=nombre_empresa):
-			usu = Usuario.objects.get(nombre=nombre_empresa)
-			if usu.password==password:
-				salida="Bienvenido "+nombre_empresa
-				request.session["usuario"] = nombre_empresa
-			else:
-				salida="Error al introducir usuario o contrasenia"
-
-		else:
-			salida="Error al introducir usuario o contrasenia"
-
-<<<<<<< HEAD
-
-=======
-		
->>>>>>> 29debbad8794a41f90c8636ac33e8539b73fde60
-		return render(request,'activento/index.html',{'salida':salida})
-"""
 class user(ListView):
 	template_name = 'activento/user.html'
 	model = Usuario
@@ -113,7 +91,7 @@ class crearCategoria(CreateView):
 
 
 
-		return render(request,'activento/registrarse.html',{'salida':salida})
+		return render(request,'activento/crearCategoria.html',{'salida':salida})
 
 
 
@@ -166,7 +144,6 @@ def siguiendo(request):
 
 
 
-<<<<<<< HEAD
 def listarSiguiendo(request):
 	template = loader.get_template('activento/listarSiguiendo.html')
 	if request.method=="GET":
@@ -179,7 +156,3 @@ def listarSiguiendo(request):
 		lista_seguidores=Sigue.objects.filter(seguir=request.session["usuario"])
 		context = RequestContext(request, {'lista_seguidores':lista_seguidores})
 		return HttpResponse(template.render(context))
-=======
-		return render(request,'activento/listarUsuario.html',{'usuario_activo':usuario_activo,'usuarios':usus})
-"""
->>>>>>> 29debbad8794a41f90c8636ac33e8539b73fde60
