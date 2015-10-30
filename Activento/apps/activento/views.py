@@ -29,7 +29,11 @@ class index(CreateView):
 		else:
 			salida="Error al introducir usuario o contrasenia"
 
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 29debbad8794a41f90c8636ac33e8539b73fde60
 		return render(request,'activento/index.html',{'salida':salida})
 """
 class user(ListView):
@@ -162,6 +166,7 @@ def siguiendo(request):
 
 
 
+<<<<<<< HEAD
 def listarSiguiendo(request):
 	template = loader.get_template('activento/listarSiguiendo.html')
 	if request.method=="GET":
@@ -174,3 +179,7 @@ def listarSiguiendo(request):
 		lista_seguidores=Sigue.objects.filter(seguir=request.session["usuario"])
 		context = RequestContext(request, {'lista_seguidores':lista_seguidores})
 		return HttpResponse(template.render(context))
+=======
+		return render(request,'activento/listarUsuario.html',{'usuario_activo':usuario_activo,'usuarios':usus})
+"""
+>>>>>>> 29debbad8794a41f90c8636ac33e8539b73fde60
